@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var diceImage2: UIImageView!
     
-    var randomDiceIndex1 : Int = 0
+    var randomDiceIndex : Int = 0
     
     var randomDiceIndex2 : Int = 0
     
@@ -38,10 +38,10 @@ class ViewController: UIViewController {
     
     func updateDiceImages() {
         
-        randomDiceIndex1 = Int.random(in: 0 ... 5) // generate a random integer value between 0 and 5
+        randomDiceIndex = Int.random(in: 0 ... 5) // generate a random integer value between 0 and 5
         randomDiceIndex2 = Int.random(in: 0 ... 5)
         
-        diceImage1.image = UIImage(named: diceArray[randomDiceIndex1])
+        diceImage1.image = UIImage(named: diceArray[randomDiceIndex])
         diceImage2.image = UIImage(named: diceArray[randomDiceIndex2])
         
     }
